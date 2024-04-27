@@ -695,8 +695,10 @@ body {
   color: #2727d3;
   transform: translateX(1rem); }
 
-.navigation_nav:hover {
-  background-image: radial-gradient(#6666b6, #355cd3);
+.navigation_checkbox1:checked ~ .navigation_background {
+  transform: scale(80); }
+
+.navigation_checkbox1:checked + .navigation_nav {
   opacity: 1;
   width: 100%; }
 
@@ -723,6 +725,12 @@ body {
 
 .navigation_button:hover .navigation_icon::after {
   top: 1rem; }
+
+.navigation_checkbox1:checked + .navigation_button + .navigation_icon::before {
+  transform: rotate(135deg); }
+
+.navigation_checkbox1:checked + .navigation_button + .navigation_icon::after {
+  transform: rotate(-135deg); }
 
 /* Pages*/
 .section-about {

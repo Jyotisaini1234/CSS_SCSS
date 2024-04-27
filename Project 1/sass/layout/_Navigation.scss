@@ -86,19 +86,13 @@
   }
 
   //   //////////functionality
-
-  // &_background:hover {
-  //   transform: scale(100);
-  // }
-
-  // &_checkbox1:hover,
-  &_nav:hover {
-    background-image: radial-gradient(rgb(102, 102, 182), rgb(53, 92, 211));
-
+  &_checkbox1:checked ~ &_background {
+    transform: scale(80);
+  }
+  &_checkbox1:checked + &_nav {
     opacity: 1;
     width: 100%;
   }
-
   //////////////
   //   /// navigation icon
   &_icon {
@@ -131,5 +125,11 @@
   }
   &_button:hover &_icon::after {
     top: 1rem;
+  }
+  &_checkbox1:checked + &_button + &_icon::before {
+    transform: rotate(135deg);
+  }
+  &_checkbox1:checked + &_button + &_icon::after {
+    transform: rotate(-135deg);
   }
 }
