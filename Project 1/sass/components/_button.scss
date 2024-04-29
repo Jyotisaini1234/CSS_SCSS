@@ -51,6 +51,29 @@
       opacity: 0;
     }
   }
+  &-box {
+    color: $black-color;
+    background-color: $blue-color;
+    &::after {
+      background-color: $blue-color;
+    }
+  }
+  &::after {
+    display: inline-block;
+    contain: "";
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
   &-blue {
     color: $white-color;
     background-color: $blue-color;
